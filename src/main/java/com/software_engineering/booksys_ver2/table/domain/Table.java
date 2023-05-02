@@ -1,15 +1,18 @@
 package com.software_engineering.booksys_ver2.table.domain;
 
 import com.software_engineering.booksys_ver2.booking.domain.Booking;
-import jakarta.persistence.*;
+import javax.persistence.*;
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import static jakarta.persistence.FetchType.LAZY;
+import static javax.persistence.FetchType.LAZY;
 
 @Entity
-@jakarta.persistence.Table(name = "tables")
+@javax.persistence.Table(name = "tables")
 @Getter @Setter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Table {
 
   @Id
@@ -22,4 +25,13 @@ public class Table {
 
   @OneToOne(fetch = LAZY)
   private Booking booking; // 테이블에 할당된 예약
+
+  public static Table createTable(int tableNumber, int customerCount) {
+
+    Table table = new Table();
+    table.setTableNumber(tableNumber);
+    table.setCustomerCount(customerCount);
+
+    return table;
+  }
 }
