@@ -1,7 +1,7 @@
 package com.software_engineering.booksys_ver2.restaurant.domain.repository;
 
 import com.software_engineering.booksys_ver2.restaurant.domain.Restaurant;
-import jakarta.persistence.EntityManager;
+import javax.persistence.EntityManager;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 

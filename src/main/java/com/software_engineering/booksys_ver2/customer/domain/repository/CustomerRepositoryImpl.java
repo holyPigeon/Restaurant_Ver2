@@ -1,7 +1,7 @@
 package com.software_engineering.booksys_ver2.customer.domain.repository;
 
 import com.software_engineering.booksys_ver2.customer.domain.Customer;
-import jakarta.persistence.EntityManager;
+import javax.persistence.EntityManager;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
