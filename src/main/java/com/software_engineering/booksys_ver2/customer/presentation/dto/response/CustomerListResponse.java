@@ -10,4 +10,3 @@ public class CustomerListResponse<T> {
   private int count;
   private T data;
 }
-록
