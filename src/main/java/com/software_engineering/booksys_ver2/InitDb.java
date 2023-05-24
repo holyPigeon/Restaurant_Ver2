@@ -62,19 +62,19 @@ public class InitDb {
       Customer customer1 = createCustomer("customer1", "01011111111");
       em.persist(customer1);
 
-      Reservation reservation1 = createReservation(customer1, restaurant1, table1, LocalDateTime.now(), 4, "0000");
+      Reservation reservation1 = createReservation(customer1, restaurant1, table1, LocalDateTime.now(), 4);
       em.persist(reservation1);
 
       Customer customer2 = createCustomer("customer2", "01022222222");
       em.persist(customer2);
 
-      Reservation reservation2 = createReservation(customer2, restaurant1, table2, LocalDateTime.now(), 4, "1111");
+      Reservation reservation2 = createReservation(customer2, restaurant1, table2, LocalDateTime.now(), 4);
       em.persist(reservation2);
 
       Customer customer3 = createCustomer("customer2", "01033333333");
       em.persist(customer3);
 
-      Reservation reservation3= createReservation(customer3, restaurant1, table3, LocalDateTime.now(), 10, "0000");
+      Reservation reservation3= createReservation(customer3, restaurant1, table3, LocalDateTime.now(), 10);
       em.persist(reservation3);
 
     }
@@ -94,9 +94,9 @@ public class InitDb {
       return Table.createTable(tableNumber, places);
     }
 
-    private Reservation createReservation(Customer customer, Restaurant restaurant, Table table, LocalDateTime bookingDateTime, int covers, String password) {
+    private Reservation createReservation(Customer customer, Restaurant restaurant, Table table, LocalDateTime bookingDateTime, int covers) {
 
-      return Reservation.createReservation(customer, restaurant, table, bookingDateTime, covers, password);
+      return Reservation.createReservation(customer, restaurant, table, bookingDateTime, covers);
     }
 
   }
