@@ -2,7 +2,6 @@ package com.software_engineering.booksys_ver2.customer.domain;
 
 import com.software_engineering.booksys_ver2.booking.domain.Booking;
 import javax.persistence.*;
-import javax.persistence.Table;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,12 +11,12 @@ import java.util.List;
 import java.util.Vector;
 
 @Entity
-@Table(name = "customers")
 @Getter @Setter
+@javax.persistence.Table(name = "customers")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Customer {
 
-  @Id @GeneratedValue
+  @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name="customer_id")
   private Long id;
 
