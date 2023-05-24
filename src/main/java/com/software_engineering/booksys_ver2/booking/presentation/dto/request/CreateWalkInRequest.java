@@ -15,6 +15,4 @@ public class CreateWalkInRequest {
 
   private int covers;
 
-  private String password;
-
 }
