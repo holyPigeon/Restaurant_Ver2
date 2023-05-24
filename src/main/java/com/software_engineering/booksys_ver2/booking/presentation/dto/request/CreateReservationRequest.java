@@ -18,7 +18,6 @@ public class CreateReservationRequest {
 
   private int covers;
 
-  private String password;
   @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
   private LocalDateTime bookingDateTime;
 
